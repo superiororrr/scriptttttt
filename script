@@ -1,0 +1,78 @@
+_G.configuration = {
+    host =  { -- only usernames
+"Conn419",
+    },
+    prefix = "/", -- prefix for commands
+    framelimit = 8, -- frame limit
+    ui = true, -- places a ui on the screen displaying the accounts cash
+    setups = {
+        ['bank'] = 'https://raw.githubusercontent.com/polarsblade/setups/main/bank',
+        ['club'] = 'https://raw.githubusercontent.com/polarsblade/setups/main/club',
+        ['bank2'] = 'https://raw.githubusercontent.com/polarsblade/setups/main/bank2',
+        ['train'] = 'https://raw.githubusercontent.com/polarsblade/setups/main/train',
+    },
+    accounts = {
+        ids = { -- ids only
+            4791501823,
+            4791503090,
+            4791510485,
+            4791515166,
+            4791516453,
+            4791518311,
+            4791519555,
+            4791521042,
+            4791526763,
+            4791537699,
+            4791540031,
+            4791541287,
+            4791543073,
+            4791544197,
+            4791546120,
+            4791547811,
+            4791549618,
+            4791557408,
+            4791559176,
+            5863610320,
+            5863601573,
+            5863602373,
+            5863603370,
+            5863604674,
+            5863606219,
+            5863607476,
+            5863608698,
+            5863615264,
+            5863616264,
+            5863617495,
+        },
+        fillgaps = true, -- fills gap for missing accounts
+        advertise = "/polarsblade", -- advertise message
+        cdropcovertax = true, -- cover tax for cdrop
+        responses = { -- responses for commands
+            toggle = true, -- toggle
+            ["random"] = "randomize complete",
+            ["fps"] = "fps set",
+            ["redeemcode"] = "code redeemed",
+            ["drop"] = {
+                "drop enabled", -- drop when toggled on
+                "drop disabled" -- drop when toggled off
+            },
+            ["wallet"] = {
+                "wallet equipped", -- wallets when equipped
+                "wallet unequipped" -- wallets when unequipped
+            },
+            ["setup"] = "setup complete",
+            ["circle"] = "circle formation complete",
+            ["setposition"] = "position set",
+            ["cdrop"] = {
+                "dropping amount", -- cdrop when enabled
+                "ended drop", -- cdrop when disabled
+            },
+            ["line"] = "lined up",
+            ["unarrest"] = "unarrested",
+            ["block"] = "blocking",
+            ["unblock"] = "unblocking",
+        }
+    }
+}
+
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/dde85c6b67d51ecc1631be707f84d9e4.lua"))()
