@@ -13,7 +13,7 @@ _G.configuration = {
     },
     accounts = {
         ids = { -- ids only
-4791501823, 4791503090, 4791510485, 4791515166,
+4791501823, 4791503090, 4791510485, 4791515166, 4791516453, 4791518311, 4791519555, 4791521042,
         },
         fillgaps = true, -- fills gap for missing accounts
         advertise = "/polarsblade", -- advertise message
