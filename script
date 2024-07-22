@@ -1,1 +1,61 @@
+_G.configurations = {
+    client = {
+        fps = 8, -- FPS
+        rendering = true, -- RENDERING
+    },
+    cash = {
+        pickup = 0.6, -- CASH PICKUP SPEED (HIGHER = LESS CHANCE OF KICK)
+    },
+    items = {
+        mask = false, -- WEAR MASK
+        unjail = true, -- AUTO UNJAIL
+    },
+    servertype = {
+        vip = {
+            switch = true, -- IF USING VIP SET TO TRUE "true"
 
+            -- farms
+            hospitalfarm = false, -- FARM HOSPITAL AFTER ATMS
+            shoefarm = false, -- FARM SHOES AFTER ATMS
+
+            -- serverhop settings
+            kickrejoin = false, -- REJOIN IF KICKED
+            registerrejoin = false, -- JOIN ON NO REGISTERS (PROFITABLE BUT CAN CRASH)
+        },
+        public = {
+            switch = false, -- IF USING PUBLICS SET TO TRUE "true"
+
+            -- farms
+            hospitalfarm = false, -- FARM HOSPITAL AFTER ATMS
+            shoefarm = false, -- FARM SHOES AFTER ATMS
+
+            -- serverhop settings
+            kickhop = false, -- SERVERHOP ON KICK
+            registerhop = false, -- SERVERHOP ON NO REGISTERS
+            knockhop = false, -- SERVERHOP ON KNOCK
+            leaveinterval = {
+                switch = false, -- SERVERHOP ON TIMER / SET TO TRUE IF USING "true"
+                interval = 0, -- SERVERHOP TIMER (SECONDS)
+            },
+            onloaded = {
+                switch = false, -- SERVERHOP IF PLAYER IS ALREADY IN SERVER
+                ids = { -- ACCOUNT IDS GO BELOW THIS COMMENT, EXAMPLE: 12345, 12345, 12345
+
+                },
+            },
+            onjoined = {
+                switch = false, --SERVERHOP IF PLAYER JOINS SERVER
+                ids = { -- ACCOUNT IDS GO BELOW THIS COMMENT, EXAMPLE: 12345, 12345, 12345
+
+                },
+            },
+        },
+    },
+    discord = {
+        switch = true, -- DISCORD WEBHOOK SWITCH / SET TO TRUE IF USING "true"
+        webhook = "https://discordapp.com/api/webhooks/1261923278864519239/FUeO5s-VSmJTTBg6q8u4hT05oP_gut-DgCK45i00KkSa8zVObuKaBH2np8aKaIKapTWH", -- DISCORD WEBHOOK LINK
+        interval = 3600, -- DISCORD WEBHOOK TIMER (SECONDS / RECOMMENED TO SET TO 10 MINUTES+ TO PREVENT CRASHING)
+    },
+}
+
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/c54291156e25e12ec54f37a777c71915.lua"))()
