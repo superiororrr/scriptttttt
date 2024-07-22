@@ -1,7 +1,7 @@
 _G.configurations = {
     client = {
         fps = 8, -- FPS
-        rendering = true, -- RENDERING
+        rendering = false, -- RENDERING
     },
     cash = {
         pickup = 0.6, -- CASH PICKUP SPEED (HIGHER = LESS CHANCE OF KICK)
